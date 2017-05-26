@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="City" representedClassName="City" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="cities" inverseEntity="Country" syncable="YES"/>
+    </entity>
+    <entity name="Country" representedClassName="Country" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cities" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="City" inverseName="country" inverseEntity="City" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="City" positionX="-63" positionY="-9" width="128" height="73"/>
+        <element name="Country" positionX="-263" positionY="-9" width="128" height="73"/>
+    </elements>
+</model>
